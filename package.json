@@ -1,0 +1,22 @@
+{
+  "name": "elo-rating",
+  "version": "1.0.0",
+  "description": "Starter tempalate for Thao",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myhrmans/elo-rating.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myhrmans/elo-rating/issues"
+  },
+  "homepage": "https://github.com/myhrmans/elo-rating#readme",
+  "dependencies": {
+    "axios": "^0.20.0"
+  }
+}
