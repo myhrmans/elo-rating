@@ -12,7 +12,7 @@ console.log(await getElo("-trAn", "csgo"));
 /* Print Data about specific player from Faceit*/
 //console.log(await getFaceitPlayer("-trAn"));
 
-})();
+
 
 
 /* example discord 
@@ -53,3 +53,13 @@ async function getFaceitPlayer(id){
     let player = await Promise.resolve(request);
     return player.data
 }
+
+async function sendEloToChannel() {
+    await updateSpecialBets()
+    const channel = client.channels.cache.get('ID THAO');
+    const elo = await getElo("-trAn", "csgo");
+    await channel.send("your elo is `"+ player.elo+ "`")
+
+}
+setInterval(sendEloToChannel, 24*60*60*1000); //one time a day
+})();
