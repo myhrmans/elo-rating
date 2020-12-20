@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/myhrmans/elo-rating#readme",
   "dependencies": {
-    "axios": "^0.20.0"
+    "axios": "^0.20.0",
+    "discord.js": "^12.3.1"
   }
 }
