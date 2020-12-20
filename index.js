@@ -1,5 +1,5 @@
 const axios = require('axios');
-
+const Discord = require('discord.js');
 
 const client = new Discord.Client();
 const prefix = '?';
@@ -11,7 +11,8 @@ console.log(await getElo("-trAn", "csgo"));
 
 /* Print Data about specific player from Faceit*/
 //console.log(await getFaceitPlayer("-trAn"));
-
+setInterval(sendEloToChannel, 24*60*60*1000); //one time a day
+})();
 
 
 
@@ -58,8 +59,5 @@ async function sendEloToChannel() {
     await updateSpecialBets()
     const channel = client.channels.cache.get('ID THAO');
     const elo = await getElo("-trAn", "csgo");
-    await channel.send("your elo is `"+ player.elo+ "`")
-
+    await channel.send("your elo is `"+ elo + "`")
 }
-setInterval(sendEloToChannel, 24*60*60*1000); //one time a day
-})();
