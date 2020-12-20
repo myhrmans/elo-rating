@@ -1,5 +1,9 @@
 const axios = require('axios');
 
+
+const client = new Discord.Client();
+const prefix = '?';
+
 (async () => {
 
 //Prtint Elo for CSGO
@@ -9,6 +13,24 @@ console.log(await getElo("-trAn", "csgo"));
 //console.log(await getFaceitPlayer("-trAn"));
 
 })();
+
+
+/* example discord 
+
+INIT 
+client.once('ready', () => {
+    console.log('Guns steady and loaded!')
+});
+client.login('REPLACE HERE THAO WITH YOUR CLIENT');
+
+GET CHANNEL 
+const channel = client.channels.cache.get('ID THAO');
+
+SEND CHANNEL 
+await channel.send("your elo is `"+ player.elo+ "`")
+
+*/
+
 
 async function getElo(id, game) {
     const request = await axios.get(`data/v4/players?nickname=${id}&game=${game}`, {
